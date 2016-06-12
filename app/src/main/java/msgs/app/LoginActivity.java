@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * A login screen that offers login via email/password.
@@ -17,6 +18,9 @@ import android.widget.EditText;
 public class LoginActivity extends AppCompatActivity {
     private AutoCompleteTextView username;
     private EditText password;
+    private Button signIn;
+    private Button register;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,15 +39,16 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                 SharedPreferences.Editor editor = settings.edit();
-                if(!username.getText().equals("") && !password.getText().equals("")) {
-                    //TODO - check if text is empty
+                if(!username.getText().toString().isEmpty() && !password.getText().toString().isEmpty()) {
                     //TODO - connect to server for validation
                     editor.putString("username", username.getText().toString());
                     editor.commit();
                     Intent i = new Intent(LoginActivity.this, MenuActivity.class);
                     startActivity(i);
+                }else{
+                    Toast.makeText(LoginActivity.this, "All fields are required!",
+                    Toast.LENGTH_LONG).show();
                 }
-
             }
         });
     }
