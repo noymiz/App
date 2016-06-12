@@ -47,18 +47,23 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
-
                 SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                 SharedPreferences.Editor editor = settings.edit();
                 Intent intent;
-
-                if (settings.getString("username", "User not found").equals("User not found")) {
+   /*             if(settings.getString("firstTime", "Yes").equals("Yes")){
+                    editor.putString("firstTime", "No");
+                    editor.commit();
+                    intent = new Intent(MainActivity.this, ExpActivity.class);
+                }
+                else if (settings.getString("username", "User not found").equals("User not found")) {
                     intent = new Intent(MainActivity.this, LoginActivity.class);
                 }
                 else{
                     intent = new Intent(MainActivity.this, MenuActivity.class);
-                }
+                }*/
+                intent = new Intent(MainActivity.this, ExpActivity.class);
                 startActivity(intent);
+                MainActivity.this.finish();
             }
         });
         t.start();

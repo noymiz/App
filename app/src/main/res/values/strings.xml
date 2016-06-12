@@ -1,21 +1,29 @@
 <resources>
     <string name="app_name">App</string>
     <string name="action_settings">Settings</string>
-<string name="title_activity_menu">Menu</string>
-<string name="title_activity_login">Sign in</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_activity_login">Sign in</string>
 
-<!-- Strings related to login -->
-<string name="prompt_email">Username</string>
-<string name="prompt_password">Password</string>
-<string name="action_sign_in">Sign in</string>
-<string name="action_sign_up">register</string>
-<string name="action_sign_in_short">Sign in</string>
-<string name="error_invalid_email">This email address is invalid</string>
-<string name="error_invalid_password">This password is too short</string>
-<string name="error_incorrect_password">This password is incorrect</string>
-<string name="error_field_required">This field is required</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_up">register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-<string name="title_activity_sign_up">SignUp</string>
+    <string name="title_activity_sign_up">SignUp</string>
+    <string name="title_activity_exp">ExpActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_main22">Main22Activity</string>
+    <string name="frg1Text">Messaging is the unlimited texting app for android phone.</string>
+    <string name="frg2Text">Messaging lets you send messages to anyone for free</string>
+    <string name="frg3Text">Send messages to other users, Replies come back free, too!</string>
+    <string name="frg4Text">Messaging allows you to chat with people all over the world!</string>
+    <string name="frg5Text">Lets go!!</string>
 </resources>
