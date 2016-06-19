@@ -7,6 +7,7 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import java.net.URL;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -49,19 +50,20 @@ public class MainActivity extends AppCompatActivity {
                 }
                 SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                 SharedPreferences.Editor editor = settings.edit();
+                editor.clear();
                 Intent intent;
-   /*             if(settings.getString("firstTime", "Yes").equals("Yes")){
+                if(settings.getString("firstTime", "Yes").equals("Yes")){
                     editor.putString("firstTime", "No");
                     editor.commit();
                     intent = new Intent(MainActivity.this, ExpActivity.class);
                 }
                 else if (settings.getString("username", "User not found").equals("User not found")) {
+                    // TODO connect to web server
                     intent = new Intent(MainActivity.this, LoginActivity.class);
                 }
                 else{
                     intent = new Intent(MainActivity.this, MenuActivity.class);
-                }*/
-                intent = new Intent(MainActivity.this, ExpActivity.class);
+                }
                 startActivity(intent);
                 MainActivity.this.finish();
             }
