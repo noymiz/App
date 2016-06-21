@@ -50,27 +50,31 @@ public class MainActivity extends AppCompatActivity {
                 }
                 SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                 SharedPreferences.Editor editor = settings.edit();
-                editor.clear();
                 Intent intent;
-                if(settings.getString("firstTime", "Yes").equals("Yes")){
+           /*    if(settings.getString("firstTime", "Yes").equals("Yes")){
                     editor.putString("firstTime", "No");
                     editor.commit();
                     intent = new Intent(MainActivity.this, ExpActivity.class);
                 }
                 else if (settings.getString("username", "User not found").equals("User not found")) {
-                    // TODO connect to web server
                     intent = new Intent(MainActivity.this, LoginActivity.class);
                 }
                 else{
-                    intent = new Intent(MainActivity.this, MenuActivity.class);
-                }
+                   // TODO connect to web server
+                   //attempt connecting to server
+                   *//*UserLoginTask mAuthTask = new UserLoginTask(settings.getString("username",""),
+                                                                settings.getString("password", ""));
+                   mAuthTask.execute();
+                   finish();*//*
+                   intent = new Intent(MainActivity.this, MenuActivity.class);
+                }*/
+                intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
                 MainActivity.this.finish();
             }
         });
         t.start();
     }
-
 
 
 }
