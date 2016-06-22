@@ -88,7 +88,7 @@ public class LoginActivity extends AppCompatActivity {
             String ans = null;
             try {
                 StringBuilder req = new StringBuilder();
-                req.append("http://192.168.1.11:8080/Server/Login?username=").append(user.replaceAll(" ", "%20")).append("&")
+                req.append("http://advprog.cs.biu.ac.il:8080/NoyRoi/Login?username=").append(user.replaceAll(" ", "%20")).append("&")
                         .append("password=").append(pass);
                 URL url = new URL(req.toString());
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();

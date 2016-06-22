@@ -210,7 +210,7 @@ public class MenuActivity extends AppCompatActivity implements SensorEventListen
         protected String doInBackground(Void... params) {
             try {
                 StringBuilder req = new StringBuilder();
-                req.append("http://192.168.1.11:8080/Server/GetMsgs");
+                req.append("http://advprog.cs.biu.ac.il:8080/NoyRoi/GetMsgs");
                 URL url = new URL(req.toString());
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 try {
@@ -268,7 +268,7 @@ public class MenuActivity extends AppCompatActivity implements SensorEventListen
                 StringBuilder req = new StringBuilder();
                 String newText = text.replaceAll(" ", "%20");
                 String newUser = username.replaceAll(" ", "%20");
-                req.append("http://192.168.1.11:8080/Server/PostMsg?username=")
+                req.append("http://advprog.cs.biu.ac.il:8080/NoyRoi/PostMsg?username=")
                 .append(newUser).append("&time=").append(time).append("&text=").append(newText);
                 URL url = new URL(req.toString());
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
@@ -313,7 +313,7 @@ public class MenuActivity extends AppCompatActivity implements SensorEventListen
             Integer count = 0;
             try {
                 StringBuilder req = new StringBuilder();
-                req.append("http://192.168.1.11:8080/Server/GetMsgs");
+                req.append("http://advprog.cs.biu.ac.il:8080/NoyRoi/GetMsgs");
                 URL url = new URL(req.toString());
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 try {
