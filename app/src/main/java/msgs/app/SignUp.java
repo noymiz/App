@@ -98,7 +98,7 @@ public class SignUp extends AppCompatActivity {
             String ans = null;
             try {
                 StringBuilder req = new StringBuilder();
-                req.append("http://192.168.1.11:8080/Server/SignUp?username=").append(user)
+                req.append("http://192.168.1.11:8080/Server/SignUp?username=").append(user.replaceAll(" ", "%20"))
                         .append("&password=").append(pass).append("&email=").append(ema)
                         .append("&name=").append(nam).append("&icon=").append(ic);
                 URL url = new URL(req.toString());

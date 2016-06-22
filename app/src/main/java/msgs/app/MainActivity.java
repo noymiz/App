@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                 SharedPreferences.Editor editor = settings.edit();
+                editor.clear();editor.commit();
                 Intent intent;
                 if(settings.getString("firstTime", "Yes").equals("Yes")){
                     editor.putString("firstTime", "No");

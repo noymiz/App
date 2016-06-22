@@ -135,7 +135,7 @@ public class MenuActivity extends AppCompatActivity implements SensorEventListen
         sensorManager = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
         NotificationReceiver.activity = this;
         AlarmManager alarmMgr = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
-        Long timeToAlert = new GregorianCalendar().getTimeInMillis() + 10000;
+        Long timeToAlert = new GregorianCalendar().getTimeInMillis() + 60000*5;
         Intent notify = new Intent(this, NotificationReceiver.class);
         alarmMgr.set(AlarmManager.RTC_WAKEUP, timeToAlert,
                 PendingIntent.getBroadcast(this, 0, notify, PendingIntent.FLAG_UPDATE_CURRENT));
@@ -197,7 +197,7 @@ public class MenuActivity extends AppCompatActivity implements SensorEventListen
         mAuthTask3 = new UpdateMessagesTask(this);
         mAuthTask3.execute();
         AlarmManager alarmMgr = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        Long timeToAlert = new GregorianCalendar().getTimeInMillis() + 10000;
+        Long timeToAlert = new GregorianCalendar().getTimeInMillis() + 60000*5;
         Intent notify = new Intent(this, NotificationReceiver.class);
         alarmMgr.set(AlarmManager.RTC_WAKEUP, timeToAlert,
                 PendingIntent.getBroadcast(this, 0, notify, PendingIntent.FLAG_UPDATE_CURRENT));
