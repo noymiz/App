@@ -58,6 +58,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <receiver android:name=".NotificationReceiver"></receiver>
         <activity
             android:name=".ExpActivity"
             android:label="@string/title_activity_exp"
